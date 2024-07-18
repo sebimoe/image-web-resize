@@ -1,0 +1,41 @@
+{
+  "name": "image-web-resize",
+  "version": "1.0.0",
+  "description": "A small library for resizing images for web using `sharp` library.",
+  "author": "sebimoe <sebi@sebi.moe>",
+  "license": "MIT",
+  "homepage": "https://github.com/sebimoe/image-web-resize#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebimoe/image-web-resize.git"
+  },
+  "scripts": {
+    "build": "npm-run-all clean build:esm build:cjs",
+    "build:esm": "tsc --project tsconfig.esm.json",
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "clean": "rimraf dist"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "keywords": [
+    "image",
+    "resize",
+    "webp",
+    "breakpoint"
+  ],
+  "devDependencies": {
+    "@types/imagemin-webp": "^7.0.3",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.7",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "imagemin-webp": "^8.0.0",
+    "sharp": "^0.33.4"
+  }
+}
